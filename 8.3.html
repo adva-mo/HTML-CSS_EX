@@ -5,15 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8.3 positions</title>
+    <style>
+        .container {
+            width: 370px; /*370px*/
+            height: 370px;
+            position: relative;
+        }
+        .div-1 {
+            border: black 2px solid;
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+        }
+        .div-2 {
+            border: black 2px solid;
+            width: 120px;
+            height: 200px;
+            z-index: 2;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: white;
+        }
+        .div-3 {
+            border: black 2px solid;
+            width: 300px;
+            height: 120px;
+            z-index: 3;
+            position: absolute;
+            bottom: 50px;
+            background-color: white;
+        }
+        .div-4 {
+            border: black 2px solid;
+            width: 60px;
+            height: 350px;
+            z-index: 4;
+            position: absolute;
+            right: 20px;
+            bottom: 17px;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="div-1"></div>
-        div-1
-    <div class="div-2"></div>
-        div-2
-    <div class="div-3"></div>
-        div-3
-    <div class="div-4"></div>
-        div-4
+    <div class="container">
+        <div class="div-1">
+            <p>div-1</p></div>
+        <div class="div-2">
+            <p>div-2</p></div>
+        <div class="div-3">
+            <p>div-3</p></div>
+        <div class="div-4">
+            <p>div-4</p></div> 
+    </div>
 </body>
 </html>
