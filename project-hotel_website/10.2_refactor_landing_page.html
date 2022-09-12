@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.2 refactor landing page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        body {
+            background-color: #775fec;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        #main-box{
+            padding: 20vh 20vh;
+        }
+        h2 {
+            color: #59eb66;
+            margin: 2vh auto;
+        }
+        input {
+            border-radius: 5px;
+            border: lightgray 1px solid;
+            color:gray;
+            text-align: left;
+            font-size: x-small;
+        }
+        button {
+            background-color:#59eb66;
+            border-radius: 5px;
+            border: gray 0.2px solid;
+            padding: 0.5rem 2rem;
+            font-weight: bold;
+            margin-top: 4vh;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main-box">
+        
+        <header>
+            <h1>Welcome!</h1>
+            <h2>JOIN OUR NEWSLETTER</h2>
+            <P>recieve tips, resources,<br>reviews and get FREE gift!</P>
+        </header>
+
+        <form action="#">
+            <div>
+                <label for="name"></label><br>
+                <input type="text" name="name" id="name" value="*name">
+            </div>
+            <div>
+                <label for="email"></label><br>
+                <input type="email" name="email" id="email" value="*Email">
+            </div>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+       
+    </div>
+</body>
+</html>
