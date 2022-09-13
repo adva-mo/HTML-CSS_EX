@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.4 cool border</title>
+    <style>
+        .box {
+            width: 60vh;
+            height: 50vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            border: 3px red solid;
+            width: 30vh;
+            height: 25vh;
+            color: aliceblue;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        span {
+            align-self: center;
+            border: 7px black solid;
+            z-index: 2;
+            padding: 7vh 13vh;
+            z-index: 1;
+        
+
+        }
+        .box::before,
+        .box::after{
+            content:'';
+            width:20vh;
+            height: 25vh;
+            background-color: rgba(0, 0, 0, 0);
+            border: 5px black solid;
+            z-index: 2;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p><span>cool border</span> </p>
+    </div>
+</body>
+</html>
