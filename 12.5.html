@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.5</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block; 
+        }
+        .tooltiptext{
+            visibility:hidden;
+            width: 90px;
+            background-color: yellow;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            color: black;
+            position: absolute;
+            z-index: 1;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: yellow transparent transparent transparent;
+}
+    
+
+    </style>
+</head>
+<body>
+     <p class="tooltip">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum voluptas deleniti fugit, assumenda, voluptatibus  AAA <span class="tooltiptext" tool-tip="cool tool-tip repellendus"> repellendus</span> cupiditate quam reiciendis recusandae doloremque optio a quis unde tenetur mollitia minus reprehenderit possimus eius sit officiis magnam. Deserunt, error reprehenderit asperiores eum molestiae excepturi quis. Officiis illum repellat quidem impedit eaque libero tenetur deleniti.</p>
+    <br>
+    <br>
+    <p class="tooltip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, voluptatem rerum? Quia totam quam dolorem vel sapiente ex labore aspernatur numquam. Sequi nihil tempora laboriosam suscipit eligendi deleniti, quae aut cum, porro molestiae, ipsum iure sint laborum illum optio libero debitis reprehenderit earum voluptatem nostrum corporis vel unde! Consectetur, ab?</p>
+    </body>
+</html>
