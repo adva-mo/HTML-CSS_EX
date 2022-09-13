@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12.4 cool border</title>
-    <style>
-        .box {
-            width: 60vh;
-            height: 50vh;
-            background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        p {
-            border: 3px red solid;
-            width: 30vh;
-            height: 25vh;
-            color: aliceblue;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-        }
-        span {
-            align-self: center;
-            border: 7px black solid;
-            z-index: 2;
-            padding: 7vh 13vh;
-            z-index: 1;
-        
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12.4 cool border</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    body { 
+      background-color: black;
+      color: white;
+      height: 100vh;
+    }
+    .main-box{
+      width: 160px;
+      height: 160px;
+      margin: 50px;
+      position: relative;
+    
+    }
+    .layer {
+      width: 160px;
+      height: 160px;
+      margin: 50px;
+      /* z-index: -1; */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:space-around;
+      text-align: center;
+      position: relative;
+    }
+    .main-box::before, .main-box::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border: red 2px solid;
+      z-index: 3;
+      position: absolute;
+    }
+    .main-box::before{
+      border-width: 2px 0px 0px 2px;
+    }
+    .main-box::after {
+      top:0;
+      left:120px;
+      border-width: 2px 2px 0px 0px;
+    }
+    .layer::before, .layer::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border: red 2px solid;
+      position: absolute;
+    }
+    .layer::before {
+      top:120px;
+      left:120px;
+      border-width: 0px 2px 2px 0px;
+    }
+    .layer::after {
+      top:120px;
+      left:0px;
+      border-width: 0px 0px 2px 2px;
+    }
+    
 
-        }
-        .box::before,
-        .box::after{
-            content:'';
-            width:20vh;
-            height: 25vh;
-            background-color: rgba(0, 0, 0, 0);
-            border: 5px black solid;
-            z-index: 2;
-            position: absolute;
-        }
-
-    </style>
+  </style>
 </head>
 <body>
-    <div class="box">
-        <p><span>cool border</span> </p>
-    </div>
+  <div class="main-box">
+    <div class="layer">
+        <span> cool border</span>
+  </div></div>
 </body>
 </html>
