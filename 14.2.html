@@ -4,24 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14.2
-        <style>
-            #b1 {
-                 
-            }
-            /* button {
-                margin: 10px 10px;
-            } */
+    <title>14.2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            padding: 20px;
+            height: 100vh;
+        }
+        .box {
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            /* justify-content:space-evenly; */
+            /* align-content: space-around; */
+            padding: 20px 0;
+            /* position: relative; */
+            height: 80px;  
+        }
+        button {
+            border: 1px black solid;
+            /* padding: 10px 20px; */
+            position: relative;
+            overflow: hidden;
+            width: 100px;
+            height: 30px;
+            /* transform: translateX(1px); */
+        }
+        button::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+            transform: translateY(-30px);
+            border: 1px black solid;
+            transition: all 0.5s ease-out;
+        }
 
-        </style>
-    </title>
+        button:hover::after {
+            transform: translateY(0px);
+            position: absolute;
+        }
+
+        /** first button **/
+        #b1:after{ 
+            content:'cool';
+            background-color:red;
+        }
+        #b2:hover::after{
+
+        }
+        /** second button **/
+
+         #b2:after{
+            content: none;
+            background-color: blue;
+            transform: translateX(-100px);
+         }
+         .button #b2:hover::after{
+            transform: translateX(0px);
+            position: absolute;
+         }
+        
+
+        
+        
+    </style>
 </head>
 <body>
-    <button id="b1">TranslateY</button>
-    <button id="b2">TranslateY</button>
-    <button id="b3">TranslateY</button>
-    <br>
-    <button id="b4">TranslateY</button>
-    <button id="b5">TranslateY</button>
+    <div class="box"><button id="b1">TranslateY</button></div>
+    <div class="box"><button id="b2">TranslateY</button></div>
+    <div class="box"><button id="b3">TranslateY</button></div>
+    <div class="box"><button id="b4">TranslateY</button></div>
+    <div class="box"><button id="b5">TranslateY</button></div>
 </body>
 </html>
