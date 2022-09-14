@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            overflow:hidden;
+            /* z-index: -1; */
+            
+        }
+        .box::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(128, 28, 124);
+            position: absolute;
+            transform: translateX(100px);
+            transition: all 2s ease-out;
+            /* z-index: 3; */
+        }
+        .box:hover::after{
+            transform: translateX(0px);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>
