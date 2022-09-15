@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.4</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .grid {
+            width: 400px;
+            height: 200px;
+            display: grid;
+            grid-template-areas: 
+                'box1 box1 box2 box2 box2 box3 box4 box4'
+                'box1 box1 box2 box2 box2 box3 box4 box4'
+                'box5 box5 box2 box2 box2 box8 box8 box9'
+                'box5 box5 box6 box6 box7 box8 box8 box9'
+                'box5 box5 box6 box6 box13 box13 box13 box9'
+                'box10 box11 box11 box12 box13 box13 box13 box14'
+                'box10 box11 box11 box12 box13 box13 box13 box14'
+                ;
+            gap: 5px;
+            /* justify-content:space-evenly; */
+            /* grid-auto-rows:min-content;
+            grid-auto-columns:min-content; */
+        }
+        /* .box{
+            posit;
+        } */
+        #box1{
+            grid-area: box1;
+        }
+        #box2{
+            grid-area: box2;
+        }
+        #box3{
+            grid-area: box3;
+        }
+        #box4{
+            grid-area: box4;
+        }
+        #box5{
+            grid-area: box5;
+        }
+        #box6{
+            grid-area: box6;
+        }
+        #box7{
+            grid-area: box7;
+        }
+        #box8{
+            grid-area: box8;
+        }
+        #box9{
+            grid-area: box9;
+        }
+        #box10{
+            grid-area: box10;
+        }
+        #box11{
+            grid-area: box11;
+        }
+        #box12{
+            grid-area: box12;
+        }
+        #box13{
+            grid-area: box13;
+        }
+        #box14{
+            grid-area: box14;
+        }
+        img{
+            object-fit:cover;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* @media (max-width:767px) {
+            .grid {
+                grid-template-areas: 
+                'box1 box1 box1 box1'
+                'box2 box3 box3 box3'
+                'box4 box4 box4 box4'
+                'box5 box5 box5 box5'
+                ;
+            }
+        }
+        @media (max-width:500px) {
+            .grid {
+                grid-template-areas: 
+                'box1 box1 box1 box1'
+                'box2 box2 box2 box2'
+                'box3 box3 box3 box3'
+                'box4 box4 box4 box4'
+                'box5 box5 box5 box5'
+                ;
+                height: 50vh;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box" id="box1"><img src="/gg_starter_file/img/1.jpeg" alt=""></div>   
+        <div class="box" id="box2"><img src="/gg_starter_file/img/2.jpeg" alt=""></div>   
+        <div class="box" id="box3"><img src="/gg_starter_file/img/3.jpeg" alt=""></div>   
+        <div class="box" id="box4"><img src="/gg_starter_file/img/4.jpeg" alt=""></div>   
+        <div class="box" id="box5"><img src="/gg_starter_file/img/5.jpeg" alt=""></div> 
+        <div class="box" id="box6"><img src="/gg_starter_file/img/6.jpeg" alt=""></div>
+        <div class="box" id="box7"><img src="/gg_starter_file/img/7.jpeg" alt=""></div>
+        <div class="box" id="box8"><img src="/gg_starter_file/img/8.jpeg" alt=""></div>
+        <div class="box" id="box9"><img src="/gg_starter_file/img/9.jpeg" alt=""></div>
+        <div class="box" id="box10"><img src="/gg_starter_file/img/10.jpeg" alt=""></div>
+        <div class="box" id="box11"><img src="/gg_starter_file/img/11.jpeg" alt=""></div>
+        <div class="box" id="box12"><img src="/gg_starter_file/img/12.jpeg" alt=""></div>
+        <div class="box" id="box13"><img src="/gg_starter_file/img/13.jpeg" alt=""></div>
+        <div class="box" id="box14"><img src="/gg_starter_file/img/14.jpeg" alt=""></div>
+    </div>
+</body>
+</html>
